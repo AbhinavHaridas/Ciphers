@@ -6,6 +6,12 @@ class playfairCipher {
     public static ArrayList<String> createDigraphArray(String Text) {
         // Method to split the string to substrings of two characters each
         char[] letters = Text.toCharArray();
+        for (char letter: letters) {
+            // If j is present in the given text
+            if (letter == 'j') {
+                letter = 'i';
+            }
+        }
         String text = "";
         for (char letter: letters) {
             // To remove space from the text
