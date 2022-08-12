@@ -39,6 +39,7 @@ public class vigenereCipher {
             if (Character.isLetter(encryptedTextArray[i])) {
                 int requiredIndex = (alphabets.indexOf(encryptedTextArray[i]) - shifts.get(i % shifts.size())) % alphabets.length();
                 if (requiredIndex < 0) {
+                    // If index goes less than 0 do this
                     requiredIndex = requiredIndex + alphabets.length();
                 }
                 encryptedTextArray[i] = alphabets.charAt(requiredIndex);
